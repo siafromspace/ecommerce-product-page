@@ -1,0 +1,209 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --paleOrange: hsl(25, 100%, 94%);
+    --veryDarkBlue: hsl(220, 13%, 13%);
+    --darkGrayishBlue: hsl(219, 9%, 45%);
+    --grayishBlue: hsl(220, 14%, 75%);
+    --lightGrayishBlue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    /*0.75 opacity for lightbox background*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    padding: 2rem 7rem;
+}
+header {
+    padding-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--lightGrayishBlue);
+}
+header nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 3rem;
+}
+header nav .logo {
+    width: 50%;
+}
+header nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+header nav ul a {
+    text-decoration: none;
+    color: var(--darkGrayishBlue);
+    font-size: 0.9rem;
+    padding-bottom: 2.9rem;
+    transition: all 0.05s ease-in;
+}
+header nav ul a:hover {
+    border-bottom: 5px solid var(--orange);
+}
+.header-icon {
+    display: flex;
+    gap: 2rem;
+}
+.header-icon i {
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+    color: var(--darkGrayishBlue);
+    cursor: pointer;
+}
+.header-icon i:hover {
+    color: var(--veryDarkBlue);
+}
+.header-icon > div {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.header-icon > div:hover {
+    border: 2px solid var(--orange);
+}
+.header-icon img {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+}
+main {
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    padding: 3rem 1rem;
+}
+main .product {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+}
+.product .main-product {
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+}
+.product .main-product img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.product .product-thumbnails {
+    display: flex;
+    width: 100%;
+    gap: 4%;
+}
+.product-thumbnails img {
+    width: 22%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+}
+/* .product-thumbnails .product-thumbnail:hover {
+    transform: scaleY(-5px);
+} */
+.product-thumbnails img:hover {
+    transform: translate(0, -8px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+}
+.open {
+    border: 2px solid var(--orange);
+    opacity: 0.7;
+}
+main .desc {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.desc h4 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+.desc h1 {
+    font-size: 3rem;
+    color: var(--veryDarkBlue);
+}
+.desc p {
+    color: var(--darkGrayishBlue);
+    line-height: 1.6;
+}
+.desc .product-amount .current-amount {
+    font-size: 1.8rem;
+    color: var(--veryDarkBlue);
+    display: flex;
+    align-items: center;
+}
+.product-amount .current-amount .product-discount {
+    margin-left: 1rem;
+    font-size: 1rem;
+    background-color: var(--paleOrange);
+    color: var(--orange);
+    border-radius: 5px;
+    padding: 0.4rem;
+}
+.product-amount .prev-amount {
+    color: var(--grayishBlue);
+    margin-top: 1rem;
+    text-decoration: line-through;
+    font-weight: 700;
+}
+.desc .add-item {
+    display: flex;
+    gap: 1.5rem;
+}
+.add-item > div {
+    display: flex;
+    gap: 2rem;
+    background-color: var(--lightGrayishBlue);
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: var(--veryDarkBlue);
+}
+.add-item > div i {
+    color: var(--orange);
+    align-self: center;
+    cursor: pointer;
+}
+.input {
+    border: none;
+    outline: none;
+    color: var(--veryDarkBlue);
+    font-weight: 700;
+}
+.add-item button {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    padding: 0 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.add-item button:hover {
+    opacity: 0.7;
+}
