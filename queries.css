@@ -38,10 +38,10 @@
         width: 18px;
     }
     .hamburger-middle {
-        transform: translateY(6px);
+        transform: translateY(4px);
     }
     .hamburger-bottom {
-        transform: translateY(12px);
+        transform: translateY(8px);
     }
     header nav .logo {
         width: 90%;
@@ -115,6 +115,7 @@
     .hamburger-middle,
     .hamburger-bottom {
         width: 15px;
+        height: 2px;
     }
     .hamburger-middle {
         transform: translateY(4px);

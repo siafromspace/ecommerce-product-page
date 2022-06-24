@@ -41,6 +41,9 @@ body {
     flex-direction: column;
     gap: 2rem;
 }
+.active {
+    visibility: visible;
+}
 .mobile-menu .close-menu i {
     font-size: 2rem;
     color: var(--darkGrayishBlue);
@@ -93,16 +96,16 @@ header nav {
     top: 0;
     left: 0;
     width: 20px;
-    height: 2px;
-    background: black;
+    height: 3px;
+    background: var(--darkGrayishBlue);
     transform: rotate(0);
     transition: all 0.5s;
 }
 .hamburger-middle {
-    transform: translateY(7px);
+    transform: translateY(5px);
 }
 .hamburger-bottom {
-    transform: translateY(14px);
+    transform: translateY(10px);
 }
 header nav .logo {
     width: 50%;
