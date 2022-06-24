@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="queries.css">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f50cb12bbf.js" crossorigin="anonymous"></script>
 
@@ -19,6 +20,12 @@
 <body>
   <header>
     <nav>
+      <!--HAMBURGER ICON-->
+      <button id="menu-btn" class="hamburger">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
       <img src="images/logo.svg" alt="" class="logo">
       <ul>
         <li><a href="#">Collections</a></li>
@@ -37,14 +44,24 @@
   </header>
   <main>
     <section class="product">
+      <!-- DESKTOP VIEW -->
       <div class="main-product">
         <img src="images/image-product-1.jpg" alt="">
       </div>
       <div class="product-thumbnails">
-        <img src="images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail product-one open">
+        <img src="images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail product-one clicked">
         <img src="images/image-product-2-thumbnail.jpg" alt="" class="product-thumbnail product-two">
         <img src="images/image-product-3-thumbnail.jpg" alt="" class="product-thumbnail product-three">
         <img src="images/image-product-4-thumbnail.jpg" alt="" class="product-thumbnail product-four">
+      </div>
+    </section>
+    <!--MOBILE VIEW-->
+    <section class="mobile">
+      <div class="mobile-products">
+        <img src="images/image-product-1.jpg" alt="" class="mobile-product product-one display">
+        <img src="images/image-product-2.jpg" alt="" class="mobile-product product-two">
+        <img src="images/image-product-3.jpg" alt="" class="mobile-product product-three">
+        <img src="images/image-product-4.jpg" alt="" class="mobile-product product-four">
       </div>
     </section>
     <section class="desc">

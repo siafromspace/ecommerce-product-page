@@ -1,0 +1,134 @@
+@media(max-width: 969px) {
+    body {
+        padding: 0;
+    }
+    header {
+        padding: 0 1rem 0 1rem;
+        width: 100%;
+        border: none;
+        padding-bottom: 0;
+    }
+    header nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    header nav .logo {
+        width: 80%;
+    }
+}
+@media(max-width: 798px) {
+    header nav {
+        gap: 2rem;
+    }
+    .hamburger {
+        width: 18px;
+        height: 18px;
+    }
+    .hamburger-top, 
+    .hamburger-middle,
+    .hamburger-bottom {
+        width: 18px;
+    }
+    .hamburger-middle {
+        transform: translateY(6px);
+    }
+    .hamburger-bottom {
+        transform: translateY(12px);
+    }
+    header nav .logo {
+        width: 90%;
+        padding-bottom: 0.2rem;
+    }
+    .header-icon {
+        gap: 2rem;
+    }
+    .header-icon i {
+        font-size: 17px;
+    }
+    .header-icon > div {
+        width: 48px;
+        height: 48px;
+    }
+    .header-icon img {
+        width: 43px;
+        height: 43px;
+    }
+    main {
+        flex-direction: column;
+        padding: 0 0 2rem 0;
+    }
+    .product {
+        display: none;
+    }
+    .mobile{
+        width: 100%;
+        display: block;
+    }
+    .mobile-product {
+        display: none;
+        width: 100%;
+    }
+    .display {
+        display: block;
+    }
+    main .desc {
+        width: 100%;
+        padding: 0 2rem;
+    }
+    .desc .product-amount {
+        display: flex;
+        justify-content: space-between;
+    }
+    .desc .add-item {
+        flex-direction: column;
+    }
+    .add-item > div {
+        width: 100%;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+    .add-item button{
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
+@media(max-width: 450px) {
+    header nav {
+        gap: 1rem;
+    }
+    .hamburger {
+        width: 15px;
+        height: 15px;
+    }
+    .hamburger-top, 
+    .hamburger-middle,
+    .hamburger-bottom {
+        width: 15px;
+    }
+    .hamburger-middle {
+        transform: translateY(4px);
+    }
+    .hamburger-bottom {
+        transform: translateY(8px);
+    }
+    header nav .logo {
+        width: 80%;
+        padding-bottom: 0.2rem;
+    }
+    .header-icon {
+        gap: 1rem;
+    }
+    .header-icon i {
+        font-size: 15px;
+    }
+    .header-icon > div {
+        width: 45px;
+        height: 45px;
+    }
+    .header-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
