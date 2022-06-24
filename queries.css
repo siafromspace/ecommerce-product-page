@@ -53,7 +53,7 @@
     .header-icon i {
         font-size: 17px;
     }
-    .header-icon > div {
+    .header-icon div:last-child {
         width: 48px;
         height: 48px;
     }
@@ -133,7 +133,7 @@
     .header-icon i {
         font-size: 15px;
     }
-    .header-icon > div {
+    .header-icon div:last-child {
         width: 45px;
         height: 45px;
     }

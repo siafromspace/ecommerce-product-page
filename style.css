@@ -50,6 +50,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: -2;
 }
 .enabled {
     background-color: rgba(0, 0, 0, 0.4);
@@ -139,6 +140,21 @@ header nav ul a:hover {
 .header-icon {
     display: flex;
     gap: 2rem;
+    position: relative;
+}
+.cart-items {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--orange);
+    color: var(--white);
+    width: 25px;
+    height: 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    left: 10%;
 }
 .header-icon i {
     display: flex;
@@ -150,7 +166,7 @@ header nav ul a:hover {
 .header-icon i:hover {
     color: var(--veryDarkBlue);
 }
-.header-icon > div {
+.header-icon div:last-child {
     width: 52px;
     height: 52px;
     border-radius: 50%;
@@ -159,7 +175,7 @@ header nav ul a:hover {
     display: flex;
     align-items: flex-end;
 }
-.header-icon > div:hover {
+.header-icon div:last-child:hover {
     border: 2px solid var(--orange);
 }
 .header-icon img {
@@ -318,6 +334,11 @@ main .desc {
     padding: 0 3rem;
     font-size: 1rem;
     cursor: pointer;
+    transition: 0.2s all;
+}
+.add-item button:active {
+    transform: scale(0.8);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 .add-item button:hover {
     opacity: 0.7;
