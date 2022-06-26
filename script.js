@@ -8,7 +8,9 @@ const itemInput = document.querySelector(".input")
 const addToCart = document.querySelector(".add-to-cart")
 const cartItems = document.querySelector(".cart-items")
 const cartBody = document.querySelector(".cart-body")
+const cartBodyInner = document.querySelector(".cart-body-inner")
 const cart = document.querySelector(".cart")
+// const deleteBtn = document.querySelector(".fa-trash-can")
 
 // Add Menu Bar
 menuBtn.addEventListener("click", () => {
@@ -41,6 +43,18 @@ addToCart.addEventListener("click", () => {
     if (cartItemsNo > 0) {
         cartItems.style.visibility = "visible"
         cartItems.innerText = cartItemsNo
+        cartBodyInner.innerHTML =
+            `<div>
+              <div class='checkout-details' >
+                <img src='images/image-product-1-thumbnail.jpg' alt='' class='checkout-img'>
+                <div>
+                  <p>Fall Limited Edition Sneakers</p>
+                  <p>$125.00 * ${cartItemsNo} <span>$${+cartItemsNo * 125}</span></p>
+                </div>
+                <i onclick="deleteCartItem()" class='fa-solid fa-trash-can'></i>
+              </div>
+              <button class="checkout-btn">Checkout</button>
+            </div > `
     } else {
         alert("You can not add 0 items to cart.")
     }
@@ -49,3 +63,7 @@ addToCart.addEventListener("click", () => {
 cart.addEventListener("click", () => {
     cartBody.classList.toggle("view")
 })
+//Delete Items from Cart
+function deleteCartItem() {
+    cartBodyInner.innerHTML = `<p class="cart-empty">Your cart is empty.</p>`
+}

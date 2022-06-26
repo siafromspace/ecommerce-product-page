@@ -199,17 +199,72 @@ header nav ul a:hover {
     border-bottom: 2px solid var(--lightGrayishBlue);
     padding: 1.5rem 2rem;
 }
-.cart-body div {
+.cart-body > div {
     color: var(--darkGrayishBlue);
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 180px;
+    position: relative;
+}
+.cart-empty {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .cart-body.view {
     display: block;
+}
+.cart-body > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.checkout-details {
+    color: var(--grayishBlue);
+    font-weight: 400;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.checkout-img {
+    width: 20%;
+    border-radius: 10px;
+}
+.checkout-details > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+}
+.checkout-details > div span {
+    color: var(--veryDarkBlue);
+    font-weight: 700;
+}
+.checkout-details i {
+    align-self: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.checkout-details i:hover {
+    color: var(--orange);
+}
+.checkout-btn {
+    padding: 0.8rem;
+    margin: 0 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+.checkout-btn:hover {
+    opacity: 0.7;
+}
+.checkout-btn:active {
+    transform: scale(0.8);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 main {
     width: 100%;
