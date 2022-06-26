@@ -10,7 +10,11 @@ const cartItems = document.querySelector(".cart-items")
 const cartBody = document.querySelector(".cart-body")
 const cartBodyInner = document.querySelector(".cart-body-inner")
 const cart = document.querySelector(".cart")
-// const deleteBtn = document.querySelector(".fa-trash-can")
+const mainProduct = document.getElementById("mainProduct")
+const productThumbnail = Array.from(document.querySelectorAll(".product-thumbnail"))
+const prevBtn = document.querySelector(".previous-img")
+const nextBtn = document.querySelector(".next-img")
+const mobileProduct = Array.from(document.querySelectorAll(".mobile-product"))
 
 // Add Menu Bar
 menuBtn.addEventListener("click", () => {
@@ -68,3 +72,29 @@ function deleteCartItem() {
     cartBodyInner.innerHTML = `<p class="cart-empty">Your cart is empty.</p>`
     cartItems.style.visibility = "hidden"
 }
+//Desktop Site, Change Main Image
+productThumbnail.forEach(product => {
+    product.addEventListener("click", () => {
+        for (let product of productThumbnail) {
+            product.classList.remove("clicked")
+        }
+        mainProduct.src = `images/image-product-${product.dataset.number}.jpg`
+        product.classList.add("clicked")
+    })
+})
+//Mobile Site, Change Main Image
+nextBtn.addEventListener("click", () => {
+    const presentMobileImg = document.querySelector(".display")
+    const currentIndex = mobileProduct.indexOf(presentMobileImg)
+    const nextIndex = (currentIndex + 1) % mobileProduct.length
+    mobileProduct[currentIndex].classList.remove("display")
+    mobileProduct[nextIndex].classList.add("display")
+})
+
+prevBtn.addEventListener("click", () => {
+    const presentMobileImg = document.querySelector(".display")
+    const currentIndex = mobileProduct.indexOf(presentMobileImg)
+    const prevIndex = (currentIndex + mobileProduct.length - 1) % mobileProduct.length
+    mobileProduct[currentIndex].classList.remove("display")
+    mobileProduct[prevIndex].classList.add("display")
+})
