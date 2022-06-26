@@ -66,4 +66,5 @@ cart.addEventListener("click", () => {
 //Delete Items from Cart
 function deleteCartItem() {
     cartBodyInner.innerHTML = `<p class="cart-empty">Your cart is empty.</p>`
+    cartItems.style.visibility = "hidden"
 }
