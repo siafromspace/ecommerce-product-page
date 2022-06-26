@@ -7,6 +7,8 @@ const removeItem = document.querySelector(".fa-minus")
 const itemInput = document.querySelector(".input")
 const addToCart = document.querySelector(".add-to-cart")
 const cartItems = document.querySelector(".cart-items")
+const cartBody = document.querySelector(".cart-body")
+const cart = document.querySelector(".cart")
 
 // Add Menu Bar
 menuBtn.addEventListener("click", () => {
@@ -39,5 +41,11 @@ addToCart.addEventListener("click", () => {
     if (cartItemsNo > 0) {
         cartItems.style.visibility = "visible"
         cartItems.innerText = cartItemsNo
+    } else {
+        alert("You can not add 0 items to cart.")
     }
+})
+//View Cart Body
+cart.addEventListener("click", () => {
+    cartBody.classList.toggle("view")
 })

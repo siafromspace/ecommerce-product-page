@@ -20,6 +20,10 @@
     header nav .logo {
         width: 80%;
     }
+    .cart-body {
+        top: 0;
+        right: 1rem;
+    }
 }
 @media(max-width: 798px) {
     .mobile-menu {
@@ -60,6 +64,9 @@
     .header-icon img {
         width: 43px;
         height: 43px;
+    }
+    .cart-body {
+        z-index: 2;
     }
     main {
         flex-direction: column;
@@ -140,5 +147,11 @@
     .header-icon img {
         width: 40px;
         height: 40px;
+    }
+    .cart-body {
+        width: 320px;
+        height: 250px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

@@ -30,7 +30,7 @@ body {
 .mobile-menu {
     visibility: hidden;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     background-color: var(--white);
     top: 0;
     left: 0;
@@ -54,7 +54,7 @@ body {
 }
 .enabled {
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    z-index: 3;
 }
 .mobile-menu .close-menu i {
     font-size: 2rem;
@@ -183,11 +183,40 @@ header nav ul a:hover {
     height: 47px;
     position: absolute;
 }
+/*CART*/
+.cart-body {
+    display: none;
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background-color: white;
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.cart-body h3 {
+    border-bottom: 2px solid var(--lightGrayishBlue);
+    padding: 1.5rem 2rem;
+}
+.cart-body div {
+    color: var(--darkGrayishBlue);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+}
+.cart-body.view {
+    display: block;
+}
 main {
     width: 100%;
     display: flex;
     gap: 5rem;
     padding: 3rem 1rem;
+    position: relative;
 }
 .product {
     display: flex;
