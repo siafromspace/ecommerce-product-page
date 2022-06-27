@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/siafromspace/ecommerce-product-page.git)
-- Live Site URL: [Add live site URL here](https://ecommerce-product-page247.netlify.app)
+- Solution URL: [Live URL](https://github.com/siafromspace/ecommerce-product-page.git)
+- Live Site URL: [Code](https://ecommerce-product-page247.netlify.app)
 
 ## My process
 
