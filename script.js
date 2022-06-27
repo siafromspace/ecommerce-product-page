@@ -110,16 +110,16 @@ lightboxNextBtn.addEventListener("click", () => {
     const presentLightboxImg = document.querySelector(".lightbox-main")
     const currentIndex = lightboxImg.indexOf(presentLightboxImg)
     const nextIndex = (currentIndex + 1) % lightboxImg.length
-    lightboxImg[currentIndex].classList.remove("lightbox-main")
     lightboxImg[nextIndex].classList.add("lightbox-main")
+    lightboxImg[currentIndex].classList.remove("lightbox-main")
 })
 
 lightboxPrevBtn.addEventListener("click", () => {
     const presentLightboxImg = document.querySelector(".lightbox-main")
     const currentIndex = lightboxImg.indexOf(presentLightboxImg)
     const prevIndex = (currentIndex + mobileProduct.length - 1) % mobileProduct.length
-    lightboxImg[currentIndex].classList.remove("lightbox-main")
     lightboxImg[prevIndex].classList.add("lightbox-main")
+    lightboxImg[currentIndex].classList.remove("lightbox-main")
 })
 
 //Lightbox Thumbnail
@@ -128,7 +128,9 @@ lightboxThumbnail.forEach(thumbnail => {
         for (let thumbnail of lightboxThumbnail) {
             thumbnail.classList.remove("clicked")
         }
-        lightboxMain.src = `images/image-product-${thumbnail.dataset.number}.jpg`
+        const presentLightboxImg = document.querySelector(".lightbox-main")
+        // lightboxMain.src = `images/image-product-${thumbnail.dataset.number}.jpg`
+        presentLightboxImg.setAttribute("src", `images/image-product-${thumbnail.dataset.number}.jpg`)
         thumbnail.classList.add("clicked")
     })
 })
