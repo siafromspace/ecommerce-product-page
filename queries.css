@@ -1,3 +1,8 @@
+@media(max-width: 1300px) {
+    .lightbox-body {
+        width: 50%;
+    }
+}
 @media(max-width: 969px) {
     body {
         padding: 0;
@@ -23,6 +28,9 @@
     .cart-body {
         top: 0;
         right: 1rem;
+    }
+    .lightbox-body {
+        width: 70%;
     }
 }
 @media(max-width: 798px) {
@@ -107,7 +115,6 @@
         width: 100%;
         padding: 1rem 0;
     }
-    
     
 }
 @media(max-width: 450px) {

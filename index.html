@@ -33,6 +33,30 @@
     </ul>
   </div>
   <div class="overlay"></div>
+  <section class="lightbox">
+    <div class="lightbox-body">
+      <i class="fa-solid fa-xmark close-lightbox-btn"></i>
+      <div class="main-product">
+        <div class="lightbox-prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="lightbox-next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <img src="images/image-product-1.jpg" alt="" class="lightbox-img product-one lightbox-main" id="lightboxMain">
+        <img src="images/image-product-2.jpg" alt="" class="lightbox-img product-two">
+        <img src="images/image-product-3.jpg" alt="" class="lightbox-img product-three">
+        <img src="images/image-product-4.jpg" alt="" class="lightbox-img product-four">
+      </div>
+      <div class="product-thumbnails">
+        <img src="images/image-product-1-thumbnail.jpg" alt="" class="lightbox-thumbnail product-one clicked"
+          data-number="1">
+        <img src="images/image-product-2-thumbnail.jpg" alt="" class="lightbox-thumbnail product-two" data-number="2">
+        <img src="images/image-product-3-thumbnail.jpg" alt="" class="lightbox-thumbnail product-three" data-number="3">
+        <img src="images/image-product-4-thumbnail.jpg" alt="" class="lightbox-thumbnail product-four" data-number="4">
+      </div>
+    </div>
+  </section>
   <header>
     <nav>
       <!--HAMBURGER ICON-->
@@ -59,14 +83,15 @@
     </div>
   </header>
   <main>
+    <!--CART BODY-->
     <section class="cart-body">
       <h3>Cart</h3>
       <div class="cart-body-inner">
         <p class="cart-empty">Your cart is empty.</p>
       </div>
     </section>
+    <!--DESKTOP VIEW-->
     <section class="product">
-      <!-- DESKTOP VIEW -->
       <div class="main-product">
         <img src="images/image-product-1.jpg" alt="" id="mainProduct">
       </div>
@@ -93,6 +118,7 @@
         <img src="images/image-product-4.jpg" alt="" class="mobile-product product-four">
       </div>
     </section>
+    <!--DESC-->
     <section class="desc">
       <h4>Sneaker Company</h4>
       <h1>Fall Limited Edition Sneakers</h1>

@@ -15,6 +15,13 @@ const productThumbnail = Array.from(document.querySelectorAll(".product-thumbnai
 const prevBtn = document.querySelector(".previous-img")
 const nextBtn = document.querySelector(".next-img")
 const mobileProduct = Array.from(document.querySelectorAll(".mobile-product"))
+const lightbox = document.querySelector(".lightbox")
+const lightboxImg = Array.from(document.querySelectorAll(".lightbox-img"))
+const lightboxPrevBtn = document.querySelector(".lightbox-prev")
+const lightboxNextBtn = document.querySelector(".lightbox-next")
+const lightboxThumbnail = Array.from(document.querySelectorAll(".lightbox-thumbnail"))
+const lightboxMain = document.getElementById("lightboxMain")
+const closeLightboxBtn = document.querySelector(".close-lightbox-btn")
 
 // Add Menu Bar
 menuBtn.addEventListener("click", () => {
@@ -97,4 +104,39 @@ prevBtn.addEventListener("click", () => {
     const prevIndex = (currentIndex + mobileProduct.length - 1) % mobileProduct.length
     mobileProduct[currentIndex].classList.remove("display")
     mobileProduct[prevIndex].classList.add("display")
+})
+//LightBox, Change Main Image
+lightboxNextBtn.addEventListener("click", () => {
+    const presentLightboxImg = document.querySelector(".lightbox-main")
+    const currentIndex = lightboxImg.indexOf(presentLightboxImg)
+    const nextIndex = (currentIndex + 1) % lightboxImg.length
+    lightboxImg[currentIndex].classList.remove("lightbox-main")
+    lightboxImg[nextIndex].classList.add("lightbox-main")
+})
+
+lightboxPrevBtn.addEventListener("click", () => {
+    const presentLightboxImg = document.querySelector(".lightbox-main")
+    const currentIndex = lightboxImg.indexOf(presentLightboxImg)
+    const prevIndex = (currentIndex + mobileProduct.length - 1) % mobileProduct.length
+    lightboxImg[currentIndex].classList.remove("lightbox-main")
+    lightboxImg[prevIndex].classList.add("lightbox-main")
+})
+
+//Lightbox Thumbnail
+lightboxThumbnail.forEach(thumbnail => {
+    thumbnail.addEventListener("click", () => {
+        for (let thumbnail of lightboxThumbnail) {
+            thumbnail.classList.remove("clicked")
+        }
+        lightboxMain.src = `images/image-product-${thumbnail.dataset.number}.jpg`
+        thumbnail.classList.add("clicked")
+    })
+})
+//Open lightbox 
+mainProduct.addEventListener("click", () => {
+    lightbox.style.visibility = "visible"
+})
+//Close lightbox 
+closeLightboxBtn.addEventListener("click", () => {
+    lightbox.style.visibility = "hidden"
 })
