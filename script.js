@@ -112,6 +112,10 @@ lightboxNextBtn.addEventListener("click", () => {
     const nextIndex = (currentIndex + 1) % lightboxImg.length
     lightboxImg[nextIndex].classList.add("lightbox-main")
     lightboxImg[currentIndex].classList.remove("lightbox-main")
+    for (let thumbnail of lightboxThumbnail) {
+        thumbnail.classList.remove("clicked")
+        lightboxThumbnail[nextIndex].classList.add("clicked")
+    }
 })
 
 lightboxPrevBtn.addEventListener("click", () => {
@@ -120,6 +124,10 @@ lightboxPrevBtn.addEventListener("click", () => {
     const prevIndex = (currentIndex + mobileProduct.length - 1) % mobileProduct.length
     lightboxImg[prevIndex].classList.add("lightbox-main")
     lightboxImg[currentIndex].classList.remove("lightbox-main")
+    for (let thumbnail of lightboxThumbnail) {
+        thumbnail.classList.remove("clicked")
+        lightboxThumbnail[prevIndex].classList.add("clicked")
+    }
 })
 
 //Lightbox Thumbnail
