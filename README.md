@@ -27,8 +27,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![ecommerce1](https://user-images.githubusercontent.com/101575004/175995391-aa81c22d-8e19-47e9-ba46-41cf901e4ef2.png)
+![ecommerce2](https://user-images.githubusercontent.com/101575004/175995469-3cc32b9f-7593-4cc7-898a-6c0e21052127.png)
+![mobile1](https://user-images.githubusercontent.com/101575004/175995600-fe089eef-ec46-415e-8cba-78212fb2a466.png)
+![mobile2](https://user-images.githubusercontent.com/101575004/175995619-92b3a524-8ea5-4821-b534-37df4c2c6b21.png)
 
 ### Links
 
